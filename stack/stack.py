@@ -9,7 +9,7 @@ return elements in Last In First Out order.
    Make sure the Stack tests pass.
 3. What is the difference between using an array vs. a linked list when 
    implementing a Stack?
-"""
+You use the LinkedList class as a storage type when using a LinkedList while an empty array is set as storage when using an empty array"""
 
 # class Stack:
 #     def __init__(self):
@@ -186,22 +186,22 @@ class Stack():
             self.size = self.size - 1
             return self.storage.remove_tail()
 
-# Used to test code
-    def __repr__(self):
-        return "{self.size}".format(self=self)
+# # Used to test code
+#     def __repr__(self):
+#         return "{self.size}".format(self=self)
 
-new_stack = Stack()
-print(new_stack)
-new_stack.push(1)
-new_stack.push(2)
-new_stack.push(3)
-print(new_stack)
-print(new_stack.__len__())
-new_stack.pop()
-print(new_stack)
-new_stack.pop()
-print(new_stack)
-new_stack.pop()
-print(new_stack)
-new_stack.pop()
-print(new_stack)
+# new_stack = Stack()
+# print(new_stack)
+# new_stack.push(1)
+# new_stack.push(2)
+# new_stack.push(3)
+# print(new_stack)
+# print(new_stack.__len__())
+# new_stack.pop()
+# print(new_stack)
+# new_stack.pop()
+# print(new_stack)
+# new_stack.pop()
+# print(new_stack)
+# new_stack.pop()
+# print(new_stack)
