@@ -125,12 +125,9 @@ class DoublyLinkedList:
         max = self.head.value
         n = self.head
         while n.next != None:
-            print (n.value, max)
             if n.next.value > max:
                 max = n.next.value
-                print(max)
             n = n.next
-        print(max)
         return max
 
 # dlinklist = DoublyLinkedList()
