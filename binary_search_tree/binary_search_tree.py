@@ -63,16 +63,34 @@ class BSTNode:
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self, node):
-        pass
+        if node is None:
+            return 
+
+        self.in_order_print(self.left)
+
+        # build up call stack and see what happens 
+
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
+        # use queue
+
+        # while loop
+        #size of queque
+            #pointer variable
+            #that updates at the begginging of each loop
         pass
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
+        # stack
+        #start stack in the root node
+        # auything you can do with recursion you can do iterativly if you have a stacked data structure
+        # While loop that checks stack size
+            # pointer variable
+
         pass
 
     # Stretch Goals -------------------------
