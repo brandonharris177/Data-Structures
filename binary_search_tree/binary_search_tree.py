@@ -17,36 +17,80 @@ class BSTNode:
 
     # Insert the given value into the tree
     def insert(self, value):
-        pass
+        if value < self.value:
+            if self.left is None:
+                self.left = BSTNode(value)
+            else:
+                self.left.insert(value)
+        elif value >= self.value:
+            if self.right is None:
+                self.right = BSTNode(value)
+            else:
+                self.right.insert(value)
 
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
-        pass
+        if self.value == target:
+            return True
+        elif self.right != None and target > self.value:
+            return self.right.contains(target)
+        elif self.left != None and target < self.value:
+            return self.left.contains(target)
+        else:
+            return False
+        
 
     # Return the maximum value found in the tree
     def get_max(self):
-        pass
+        if self.right == None:
+            return self.value
+        else:
+            return self.right.get_max()
+
 
     # Call the function `fn` on the value of each node
     def for_each(self, fn):
-        pass
+        fn(self.value)
+        if self.right is not None:
+            self.right.for_each(fn)
+        if self.left is not None:
+            self.left.for_each(fn)
+
 
     # Part 2 -----------------------
 
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self, node):
-        pass
+        if node is None:
+            return 
+
+        self.in_order_print(self.left)
+
+        # build up call stack and see what happens 
+
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
+        # use queue
+
+        # while loop
+        #size of queque
+            #pointer variable
+            #that updates at the begginging of each loop
         pass
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
+        # stack
+        #start stack in the root node
+        # auything you can do with recursion you can do iterativly if you have a stacked data structure
+        # While loop that checks stack size
+            # pointer variable
+
         pass
 
     # Stretch Goals -------------------------
@@ -59,3 +103,15 @@ class BSTNode:
     # Print Post-order recursive DFT
     def post_order_dft(self, node):
         pass
+
+# tree = BSTNode(5)
+# tree.insert(30)
+# tree.insert(2)
+# tree.insert(400)
+# tree.insert(1)
+# tree.insert(15)
+# tree.insert(2)
+# tree.insert(3)
+# tree.insert(7)
+# tree.contains(7)
+# tree.contains(8)
